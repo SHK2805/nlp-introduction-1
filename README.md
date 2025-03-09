@@ -77,3 +77,17 @@
   * This is because stemming algorithms, such as the Porter Stemmer, use a set of rules to remove common suffixes and prefixes without considering the word's context.
 * While stemming is faster and simpler compared to lemmatization, it may not always produce the most accurate results. Nonetheless, it is widely used in NLP applications where speed and simplicity are prioritized.
 
+### Topics
+* **Corpus**:
+   * A corpus is a comprehensive collection of written or spoken texts utilized for linguistic analysis or research.
+   * It can encompass a body of text in a specific language, domain, or genre.
+   * Examples of corpora include a single paragraph, an entire book, a collection of articles, or a set of tweets.
+* **Document**:
+   * A document represents a single unit of text within a corpus.
+   * It can be as brief as a sentence, a paragraph, or as extensive as an article or any other form of text.
+* **Vocabulary**:
+   * Vocabulary denotes the set of unique words found within a corpus or document.
+   * It is employed to analyze the language, structure, and content of textual data.
+* **Words**:
+   * Words are the fundamental building blocks of language that convey meaning.
+   * They can be combined to form sentences, paragraphs, and more extensive pieces of text.
