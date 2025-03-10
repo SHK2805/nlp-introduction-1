@@ -12,11 +12,14 @@
 
 #### NLP
 * Download the `nltk` data
-* Give this in **main.py** as if you're using the nltk library, you don’t need to download them each time for a new class
+* Give this in **main.py** as if you're using the nltk library, you don’t need to download them each time for a new class download once and use it.
 ```python
 import nltk
-nltk.download('punkt_tab') # to download all you can use nltk.download('all')
+# to download all you can use nltk.download('all')
+nltk.download('punkt_tab')
 nltk.download('wordnet')
+nltk.download('stopwords')
+nltk.download('averaged_perceptron_tagger_eng')
 ```
 
 ### Roadmap of NLP
