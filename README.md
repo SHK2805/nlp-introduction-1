@@ -12,10 +12,11 @@
 
 #### NLP
 * Download the `nltk` data
-* Give this in main.py as if you're using the nltk library, you don’t need to download the punkt tokenizer each time for a new class
+* Give this in **main.py** as if you're using the nltk library, you don’t need to download them each time for a new class
 ```python
 import nltk
 nltk.download('punkt_tab') # to download all you can use nltk.download('all')
+nltk.download('wordnet')
 ```
 
 ### Roadmap of NLP

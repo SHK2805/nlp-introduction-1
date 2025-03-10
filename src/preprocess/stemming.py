@@ -1,12 +1,12 @@
-from src.constants import stem_all_words
+from src.constants import all_words
 from src.service.Stemming import Stemming
 from src.utils.utils import print_line
 
 stemmer = Stemming()
 print_line()
 print("Stemming words")
-stemmed_words = stemmer.stem_words(stem_all_words)
-print(stem_all_words)
+stemmed_words = stemmer.stem_words(all_words)
+print(all_words)
 print(stemmed_words)
 print_line()
 
