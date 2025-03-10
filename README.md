@@ -1,5 +1,23 @@
 # NLP Introduction
 
+### Technical
+
+#### Conda
+* **Conda** is an open-source package management system and environment management system that runs on Windows, macOS, and Linux.
+* Actions:
+  * **Create a new environment**: `conda create --name myenv`
+  * **Activate the environment**: `conda activate myenv`
+  * **Install a packages**: `pip install -r requirements.txt`
+  * **Deactivate the environment**: `conda deactivate`
+
+#### NLP
+* Download the `nltk` data
+* Give this in main.py as if you're using the nltk library, you don’t need to download the punkt tokenizer each time for a new class
+```python
+import nltk
+nltk.download('punkt_tab') # to download all you can use nltk.download('all')
+```
+
 ### Roadmap of NLP
 1. We use `python` for NLP as a programming language.
 2. Text pre-processing Step 1: **Cleaning the text data**
@@ -94,17 +112,46 @@
 * For example:```"unhappiness"```
 * Using subword tokenization, this word could be broken down into smaller units:```["un", "happiness"]``` Or even smaller subword units:```["un", "happy", "ness"]```
 
-### Topics
-* **Corpus**:
-   * A corpus is a comprehensive collection of written or spoken texts utilized for linguistic analysis or research.
-   * It can encompass a body of text in a specific language, domain, or genre.
-   * Examples of corpora include a single paragraph, an entire book, a collection of articles, or a set of tweets.
-* **Document**:
-   * A document represents a single unit of text within a corpus.
-   * It can be as brief as a sentence, a paragraph, or as extensive as an article or any other form of text.
-* **Vocabulary**:
-   * Vocabulary denotes the set of unique words found within a corpus or document.
-   * It is employed to analyze the language, structure, and content of textual data.
-* **Words**:
-   * Words are the fundamental building blocks of language that convey meaning.
-   * They can be combined to form sentences, paragraphs, and more extensive pieces of text.
+### Terminology
+* **Corpus**: A corpus is a large and structured collection of text data used for linguistic analysis or model training. It could consist of documents, books, websites, etc. For example, the Brown Corpus or Wikipedia dumps.
+* **Document**: A single piece of text within the corpus. It could be an article, book chapter, report, or any standalone unit of text.
+* **Paragraph**: A section of a document that contains multiple sentences organized around a specific idea or topic.
+* **Sentence**: A coherent group of words expressing a complete thought or idea, often ending with punctuation like a period, exclamation mark, or question mark.
+* **Word/Token**: The smallest unit of a text, often separated by spaces or punctuation. Tokenization is the process of splitting text into these units.
+* **Vocabulary**: The set of unique words or tokens present in a given corpus.
+* **Order**: Corpus → Document → Paragraph → Sentence → Word
+* **Lemma**: The base or root form of a word after applying lemmatization. For example, the lemma of "running" is "run."
+* **Stem**: The base form of a word after applying stemming. For example, the stem of "running" is "run."
+* **Phrase**: A group of words that together express a concept but may not form a complete sentence. For example, "natural language processing."
+* **N-gram**: A sequence of 'n' tokens or words. For example, in a bigram (n=2), “natural language” and “language processing” are consecutive pairs of words.
+* **Stop Words**: Commonly used words in a language, such as "the," "is," or "and," which often carry little meaning and may be filtered out during text processing.
+* **Stemming and Lemmatization**: Techniques to reduce words to their root forms. Stemming is a more mechanical process (e.g., "running" to "run"), while lemmatization is more linguistic, ensuring that the root word is valid in the language.
+* **Bag of Words (BoW)**: A representation of text where each document is treated as a collection of words, ignoring grammar but keeping frequency.
+* **TF-IDF (Term Frequency-Inverse Document Frequency)**: A technique that evaluates the importance of a word in a document relative to the entire corpus.
+* **Embedding**: A dense vector representation of words or text, capturing their semantic meaning, like word2vec or GloVe.
+* **Annotation**: The process of labeling or tagging text data with information such as part of speech, named entities, or sentiment to prepare it for analysis.
+* **Named Entity Recognition (NER)**: Identifying and classifying entities like names, dates, locations, or organizations in a text.
+* **Part-of-Speech (POS) Tagging**: Assigning word categories (e.g., noun, verb, adjective) to each word in a sentence.
+* **Chunking**: Grouping words into meaningful phrases, such as noun phrases or verb phrases, based on POS tags.
+* **Parsing**: Analyzing the grammatical structure of a sentence, often resulting in a parse tree.
+* **Language Model**: A statistical model or neural network that predicts the next word or sequence of words in a text. Examples include GPT, BERT, and LSTM-based models.
+* **Word Sense Disambiguation (WSD)**: Determining which meaning of a word is intended based on its context.
+* **Sentiment Analysis**: Identifying the emotional tone of a text, such as positive, negative, or neutral.
+* **Text Classification**: Assigning categories or labels to text data, like spam detection or topic categorization.
+* **Topic Modeling**: Discovering abstract topics within a collection of documents (e.g., using LDA - Latent Dirichlet Allocation).
+* **Sequence-to-Sequence (Seq2Seq)**: A type of neural network architecture used for tasks like machine translation, where an input sequence is transformed into an output sequence.
+* **Attention Mechanism**: A technique in neural networks that allows the model to focus on specific parts of the input while making predictions. This is central to models like Transformers.
+* **Transformer**: A type of neural network architecture that's widely used in NLP tasks, known for its scalability and effectiveness (e.g., the foundation of BERT and GPT).
+* **Co-reference Resolution**: Identifying when different words or phrases in a text refer to the same entity (e.g., "Alice said she would come"—"she" refers to "Alice").
+* **Latent Semantic Analysis (LSA)**: A technique for analyzing relationships between terms in text data, often used for dimensionality reduction.
+* **Zero-shot Learning**: The ability of a model to perform a task without having seen any explicit examples of that task during training.
+* **Transfer Learning**: Reusing a pre-trained model on a new, related task to improve performance.
+
+### Code Explanation
+
+| Tokenizer             | Handles Contractions | Splits by Punctuation | Example for "Don't" | Use case               |
+|-----------------------|----------------------|-----------------------|---------------------|------------------------|
+| word_tokenize         | Yes                  | Yes                   | ["Do", "n't"]       | General / English      |
+| wordpunct_tokenize    | No                   | Yes                   | ["Don", "'", "t"]   | General / Simple       |
+| TreebankWordTokenizer | Yes                  | Yes                   | ["Do", "n't"]       | sophisticated handling |
+
