@@ -124,6 +124,33 @@ nltk.download('maxent_ne_chunker')
 * For example:```"unhappiness"```
 * Using subword tokenization, this word could be broken down into smaller units:```["un", "happiness"]``` Or even smaller subword units:```["un", "happy", "ness"]```
 
+#### Named Entity Recognition (NER)
+* Named Entity Recognition (NER) is a critical task in Natural Language Processing (NLP) that involves identifying and classifying named entities mentioned in the text into predefined categories such as person names, organizations, locations, dates, etc. Essentially, it helps to extract specific information from the text, making it easier to understand and analyze.
+* **Example:**
+* Consider the sentence: 
+```plaintext
+Barack Obama was born on August 4, 1961, in Honolulu, Hawaii.
+```
+* In this sentence, NER would identify and classify:
+  * **Barack Obama** as a **Person**
+  * **August 4, 1961** as a **Date**
+  * **Honolulu** as a **Location**
+  * **Hawaii** as a **Location**
+* Here's a more complex example:
+```plaintext
+Google, headquartered in Mountain View, California, was founded by Larry Page and Sergey Brin while they were Ph.D. students at Stanford University.
+```
+* NER would identify:
+  * **Google** as an **Organization**
+  * **Mountain View** as a **Location**
+  * **California** as a **Location**
+  * **Larry Page** as a **Person**
+  * **Sergey Brin** as a **Person**
+  * **Stanford University** as an **Organization**
+* NER is incredibly useful for applications like information retrieval, question answering, and summarizing documents. 
+* It helps machines understand the context and relevance of different entities within the text.
+
+
 ### Terminology
 * **Corpus**: A corpus is a large and structured collection of text data used for linguistic analysis or model training. It could consist of documents, books, websites, etc. For example, the Brown Corpus or Wikipedia dumps.
 * **Document**: A single piece of text within the corpus. It could be an article, book chapter, report, or any standalone unit of text.
