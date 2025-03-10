@@ -77,6 +77,23 @@
   * This is because stemming algorithms, such as the Porter Stemmer, use a set of rules to remove common suffixes and prefixes without considering the word's context.
 * While stemming is faster and simpler compared to lemmatization, it may not always produce the most accurate results. Nonetheless, it is widely used in NLP applications where speed and simplicity are prioritized.
 
+#### Tokenization
+* Tokenization is a fundamental step in natural language processing (NLP), where a stream of text is divided into meaningful pieces, known as tokens. These tokens can be words, phrases, or even punctuation marks. Let's look at a couple of examples to understand how tokenization works.
+* Tokenization is essential for tasks such as text analysis, machine translation, and information retrieval. It helps in understanding the structure of the text, making it easier to process and analyze.
+
+##### Example 1: Word Tokenization
+* Consider the sentence: ```"I love visiting new places."```
+* Using word tokenization, this sentence is broken down into individual words: ```["I", "love", "visiting", "new", "places", "."]```
+* Each word and punctuation mark is treated as a separate token.
+##### Example 2: Sentence Tokenization
+* Now, let's take a short paragraph: ```"He went to the store. Then he met his friend. They had coffee together."```
+* Using sentence tokenization, this paragraph is divided into individual sentences: ```["He went to the store.", "Then he met his friend.", "They had coffee together."]```
+* Each sentence is treated as a separate token.
+##### Example 3: Subword Tokenization
+* In some NLP applications, subword tokenization is used, especially with languages that have complex morphology or in cases where the vocabulary is large. 
+* For example:```"unhappiness"```
+* Using subword tokenization, this word could be broken down into smaller units:```["un", "happiness"]``` Or even smaller subword units:```["un", "happy", "ness"]```
+
 ### Topics
 * **Corpus**:
    * A corpus is a comprehensive collection of written or spoken texts utilized for linguistic analysis or research.
