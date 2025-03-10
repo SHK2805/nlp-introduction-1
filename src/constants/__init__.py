@@ -4,6 +4,10 @@ Natural Language Processing (NLP) is a field of machine learning where models le
 Training models to perform these tasks requires large amounts of data. The more capable you want your model to be, the more data it needs. Fortunately, repositories like Hugging Face, Kaggle, GitHub, and Papers with Code offer vast, varied datasets that are readily available for public use.
 In this post, we've compiled 20 of the most popular NLP datasets, categorized into general NLP tasks, sentiment analysis, text-based tasks, and speech recognition. We also explore the key criteria for selecting the ideal dataset for your project.
 """
+ner_corpus = """Microsoft Corporation, headquartered in Redmond, Washington, was founded by Bill Gates and Paul Allen on April 4, 1975. 
+The company reported a revenue of $198 billion in 2022. Recently, it announced its partnership with OpenAI to enhance AI capabilities across its Azure platform.
+Meanwhile, in London, Prime Minister Rishi Sunak emphasized the importance of technological advancements during a speech at the House of Commons. 
+In other news, Tesla's CEO, Elon Musk, unveiled a new electric vehicle model in San Francisco, with plans to expand its market presence in Asia, particularly in China and Japan."""
 # Words by type
 inflected_forms = ["playing", "played", "plays", "player", "running", "runner", "runs", "walked", "walking"]
 plurals = ["cats", "dogs", "boxes", "flies", "babies", "leaves", "wolves"]
