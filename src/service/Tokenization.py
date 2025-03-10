@@ -1,4 +1,3 @@
-from antlr4.tree.Trees import Trees
 from nltk import TreebankWordTokenizer
 from nltk.tokenize import sent_tokenize, word_tokenize, wordpunct_tokenize, treebank
 
@@ -10,21 +9,21 @@ class Tokenization:
         pass
 
     # this will tokenize sentences based on punctuations
-    def sent_tokenize(self, input):
+    def sent_tokenize(self, data_input):
         tag: str = f"[{self.class_name}]::[sent_tokenize]::"
-        return sent_tokenize(input)
+        return sent_tokenize(data_input)
 
     # this will tokenize words based on spaces
-    def word_tokenize(self, input):
+    def word_tokenize(self, data_input):
         tag: str = f"[{self.class_name}]::[word_tokenize]::"
-        return word_tokenize(input)
+        return word_tokenize(data_input)
 
     # this will tokenize words based on punctuations
-    def wordpunct_tokenize(self, input):
+    def wordpunct_tokenize(self, data_input):
         tag: str = f"[{self.class_name}]::[wordpunct_tokenize]::"
-        return wordpunct_tokenize(input)
+        return wordpunct_tokenize(data_input)
 
     # this will tokenize words based on treebank
-    def treebank_tokenize(self, input):
+    def treebank_tokenize(self, data_input):
         tag: str = f"[{self.class_name}]::[treebank_tokenize]::"
-        return TreebankWordTokenizer().tokenize(input)
+        return TreebankWordTokenizer().tokenize(data_input)

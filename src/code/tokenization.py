@@ -1,5 +1,5 @@
 from src.constants import *
-from src.tokenization.Tokenization import Tokenization
+from src.service.Tokenization import Tokenization
 from src.utils.utils import print_line
 
 print(corpus)

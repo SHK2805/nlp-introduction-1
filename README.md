@@ -72,10 +72,14 @@ nltk.download('punkt_tab') # to download all you can use nltk.download('all')
     - "happier" becomes "happy"
     - "was" becomes "be"
 * Lemmatization considers the context and part of speech of words, which makes it more accurate than stemming (a simpler process that removes affixes from words).
+* Disadvantages:
+  * Slower due to its reliance on a lexical database (like WordNet). 
+  * More complex to implement compared to stemming.
 
 ##### Stemming
 * Stemming is a technique in natural language processing (NLP) that reduces words to their root form by removing suffixes and prefixes. 
 * Unlike **lemmatization**, which considers the context and converts words to their meaningful base forms, stemming uses simple heuristics to chop off parts of words.
+* Works well for basic tasks like search engines
 * Stemming helps in standardizing words, which is useful for tasks like text analysis, information retrieval, and search engines. 
 * However, it can sometimes produce non-standard or incomplete root forms.
 * Here are some examples of stemming:
@@ -94,6 +98,9 @@ nltk.download('punkt_tab') # to download all you can use nltk.download('all')
 * Notice that stemming can sometimes produce stems that are not valid words (e.g., "happiest" becomes "happi"). 
   * This is because stemming algorithms, such as the Porter Stemmer, use a set of rules to remove common suffixes and prefixes without considering the word's context.
 * While stemming is faster and simpler compared to lemmatization, it may not always produce the most accurate results. Nonetheless, it is widely used in NLP applications where speed and simplicity are prioritized.
+* Disadvantages:
+  * It Can sometimes be too aggressive, resulting in incorrect or non-existent roots (e.g., "flies" becomes "fli"). 
+  * Lacks linguistic context, so it may not preserve the meaning of the word.
 
 #### Tokenization
 * Tokenization is a fundamental step in natural language processing (NLP), where a stream of text is divided into meaningful pieces, known as tokens. These tokens can be words, phrases, or even punctuation marks. Let's look at a couple of examples to understand how tokenization works.
