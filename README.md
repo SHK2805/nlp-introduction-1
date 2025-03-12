@@ -194,3 +194,21 @@ Google, headquartered in Mountain View, California, was founded by Larry Page an
 | wordpunct_tokenize    | No                   | Yes                   | ["Don", "'", "t"]   | General / Simple       |
 | TreebankWordTokenizer | Yes                  | Yes                   | ["Do", "n't"]       | sophisticated handling |
 
+
+#### Word2Vec
+* Word2Vec is a popular technique in natural language processing (NLP) used to create word embeddings.
+* Word embeddings are vector representations of words that capture semantic relationships between words.
+* Word2Vec is based on the idea that words that appear in similar contexts have similar meanings.
+* There are two main architectures for Word2Vec: 
+  * Continuous Bag of Words (CBOW)
+  * Skip-gram.
+* We are using the `gensim` library to train Word2Vec models.
+```python
+pip install gensim
+from gensim.models import Word2Vec
+```
+* We are using **fse/word2vec-google-news-300** from (huggingface)[https://huggingface.co/fse/word2vec-google-news-300]
+* It is a Pre-trained vector trained on a part of the Google News dataset (about 100 billion words). 
+* The model contains 300-dimensional vectors for 3 million words and phrases. 
+* The phrases were obtained using a simple data-driven approach described in 'Distributed Representations of Words and Phrases and their Compositionality'
+* The first run for word2vec takes a long time as it has to download the model from the internet.

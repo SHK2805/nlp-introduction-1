@@ -3,3 +3,4 @@ setuptools
 wheel
 spacy
 nltk
+gensim
